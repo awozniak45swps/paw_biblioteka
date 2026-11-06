@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteka</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
@@ -18,7 +19,7 @@
             <a href="#about">O bibliotece</a>
             <a href="#books">Książki</a>
             <a href="#rules">Jak wypożyczyć?</a>
-            <a href="add_book.html"> Dodaj książkę</a>
+            <a href="add_book.html">Dodaj książkę</a>
         </nav>
     </header>
 
@@ -44,6 +45,58 @@
                 alt="Ikona książki"
                 width="120"
             >
+        </section>
+
+        <section id="search">
+            <h2>Wyszukaj książkę</h2>
+
+            <form class="search-form" method="get">
+
+                <div>
+                    <label for="query">
+                        Tytuł lub autor:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="query"
+                        name="query"
+                        placeholder="np. Solaris"
+                    >
+                </div>
+
+                <div>
+                    <label for="search-category">
+                        Kategoria:
+                    </label>
+
+                    <select
+                        id="search-category"
+                        name="category"
+                    >
+                        <option value="">
+                            Wszystkie
+                        </option>
+
+                        <option value="fantasy">
+                            Fantasy
+                        </option>
+
+                        <option value="science-fiction">
+                            Science fiction
+                        </option>
+
+                        <option value="crime">
+                            Kryminał
+                        </option>
+                    </select>
+                </div>
+
+                <button type="submit">
+                    Szukaj
+                </button>
+
+            </form>
         </section>
 
         <section id="books">
@@ -81,121 +134,75 @@
                 </tbody>
             </table>
 
-            <section id="search">
-                <h2>Wyszukaj książkę</h2>
+            <!-- Otwarcie kontenera dla kart -->
+            <div class="book-list">
 
-                <form method="get">
+                <article class="book-card">
+                    <h3>Solaris</h3>
 
-                    <div>
-                        <label for="query">
-                            Tytuł lub autor:
-                        </label>
+                    <div class="book-info">
+                        <p>
+                            <strong>Autor:</strong> Stanisław Lem
+                        </p>
 
-                        <input
-                            type="text"
-                            id="query"
-                            name="query"
-                            placeholder="np. Solaris"
-                        >
+                        <p>
+                            <strong>Rok wydania:</strong> 1961
+                        </p>
                     </div>
 
-                    <div>
-                        <label for="search-category">
-                            Kategoria:
-                        </label>
+                    <p>
+                        Powieść science fiction opowiadająca o próbie
+                        kontaktu człowieka z obcą formą inteligencji.
+                    </p>
+                </article>
 
-                        <select
-                            id="search-category"
-                            name="category"
-                        >
-                            <option value="">
-                                Wszystkie
-                            </option>
+                <article class="book-card">
+                    <h3>Lalka</h3>
 
-                            <option value="fantasy">
-                                Fantasy
-                            </option>
+                    <p>
+                        <strong>Autor:</strong> Bolesław Prus
+                    </p>
 
-                            <option value="science-fiction">
-                                Science fiction
-                            </option>
+                    <p>
+                        Powieść przedstawiająca historię Stanisława
+                        Wokulskiego oraz społeczeństwo XIX-wiecznej Warszawy.
+                    </p>
+                </article>
 
-                            <option value="crime">
-                                Kryminał
-                            </option>
-                        </select>
+                <article class="book-card">
+                    <h3>Hobbit</h3>
+
+                    <p>
+                        <strong>Autor:</strong> J.R.R. Tolkien
+                    </p>
+
+                    <p>
+                        Historia wyprawy Bilba Bagginsa, który opuszcza
+                        spokojny dom i wyrusza w niebezpieczną podróż.
+                    </p>
+                </article>
+
+                <article class="book-card">
+                    <h3>Mały Książę</h3>
+
+                    <div class="book-info">
+                        <p>
+                            <strong>Autor:</strong> Antoine de Saint-Exupéry
+                        </p>
+
+                        <p>
+                            <strong>Rok wydania:</strong> 1943
+                        </p>
                     </div>
 
-                    <button type="submit">
-                        Szukaj
-                    </button>
-
-                </form>
-            </section>
-
-            <article>
-                <h3>Solaris</h3>
-
-                <div class="book-info">
                     <p>
-                        <strong>Autor:</strong> Stanisław Lem
+                        Opowieść o podróży Małego Księcia i jego spotkaniach
+                        z mieszkańcami różnych planet.
                     </p>
+                </article>
 
-                    <p>
-                        <strong>Rok wydania:</strong> 1961
-                    </p>
-                </div>
+            </div> <!-- Zamknięcie kontenera dla kart -->
 
-                <p>
-                    Powieść science fiction opowiadająca o próbie
-                    kontaktu człowieka z obcą formą inteligencji.
-                </p>
-            </article>
-
-            <article>
-                <h3>Lalka</h3>
-
-                <p>
-                    <strong>Autor:</strong> Bolesław Prus
-                </p>
-
-                <p>
-                    Powieść przedstawiająca historię Stanisława
-                    Wokulskiego oraz społeczeństwo XIX-wiecznej Warszawy.
-                </p>
-            </article>
-
-            <article>
-                <h3>Hobbit</h3>
-
-                <p>
-                    <strong>Autor:</strong> J.R.R. Tolkien
-                </p>
-
-                <p>
-                    Historia wyprawy Bilba Bagginsa, który opuszcza
-                    spokojny dom i wyrusza w niebezpieczną podróż.
-                </p>
-            </article>
-
-            <article>
-                <h3>Mały Książę</h3>
-
-                <div class="book-info">
-                    <p>
-                        <strong>Autor:</strong> Antoine de Saint-Exupéry
-                    </p>
-
-                    <p>
-                        <strong>Rok wydania:</strong> 1943
-                    </p>
-                </div>
-
-                <p>
-                    Opowieść o podróży Małego Księcia i jego spotkaniach
-                    z mieszkańcami różnych planet.
-                </p>
-            </article>
         </section>
 
         <section id="rules">
